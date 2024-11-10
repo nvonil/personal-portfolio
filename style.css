@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --black: #212529;
+    --white: #f8f9fa;
+    --green: #73877b;
+}
+
+body {
+    background-color: var(--white);
+}
+
+/* ========== Nav ========== */
+nav {
+    position: fixed;
+    left: 50%;
+    top: 1rem;
+    transform: translateX(-50%);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 3rem;
+
+    padding: 0.5rem 1.5rem;
+}
+
+.navbar-title {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+
+    transition: transform 0.3s;
+}
+
+.navbar-title:hover,
+.navbar-contact-button:hover {
+    transform: scale(1.05);
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-link-item a {
+    color: var(--white);
+    font-weight: 300;
+}
+
+.navbar-link-item {
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.navbar-link-item:hover {
+    transform: translateY(-10%);
+}
+
+.navbar-link-item::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 25px;
+    transform: scaleX(0);
+
+    width: 100%;
+    height: 3px;
+
+    background-color: var(--green);
+    border-radius: 1rem;
+
+    transition: transform 0.3s;
+}
+
+.navbar-link-item:hover::after {
+    transform: scaleX(1);
+}
+
+#navbar-menu-icon {
+    color: var(--white);
+    font-size: 2rem;
+
+    display: none;
+}
+
+.navbar-contact-button {
+    padding: 0.5rem 1.5rem;
+
+    background-color: var(--green);
+    border: none;
+    border-radius: 3rem;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+
+    transition: transform 0.3s;
+}
+
+/* ========== About ========== */
+section {
+    padding: 10rem 15%;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.text-greeting {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.text-name {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.text-description {
+    color: var(--green);
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.info-socials {
+    display: flex;
+    gap: 2rem;
+}
+
+.info-socials i {
+    font-size: 2.5rem;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.info-socials i:hover {
+    transform: scale(1.05);
+}
+
+.about-image {
+    width: 500px;
+    height: 500px;
+
+    background-color: var(--green);
+    border-radius: 50%;
+}
