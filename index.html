@@ -6,7 +6,11 @@
         <title>Personal Portfolio | @nvonil</title>
         <link rel="stylesheet" href="style.css" />
 
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -15,61 +19,170 @@
     <body>
         <!-- ========== Nav ========== -->
         <nav class="navbar">
-            <a href="#" class="navbar-title">Lino Navarro</a>
             <ul class="navbar-links">
-                <li class="navbar-link-item"><a href="#">About</a></li>
-                <li class="navbar-link-item"><a href="#">Skills</a></li>
-                <li class="navbar-link-item"><a href="#">Projects</a></li>
+                <li class="navbar-link-item"><a href="#about">About</a></li>
+                <li class="navbar-link-item"><a href="#skills">Skills</a></li>
+                <li class="navbar-link-item"><a href="#projects">Projects</a></li>
             </ul>
-            <i class="fa-solid fa-bars" id="navbar-menu-icon"></i>
             <button class="navbar-contact-button">Contact</button>
+            <i class="fa-solid fa-bars" id="navbar-menu-icon"></i>
         </nav>
 
+        <!-- ========== Socials ========== -->
+        <div class="social-icons">
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+
         <!-- ========== About ========== -->
-        <section class="about">
+        <section id="about" class="about">
             <div class="about-container">
                 <div class="about-info">
                     <div class="info-text">
-                        <div class="text-greeting">Hi, I'm</div>
                         <div class="text-name">Lino Navarro</div>
-                        <div class="text-description">Computer Science Major</div>
-                    </div>
-                    <div class="info-socials">
-                        <i class="fa-brands fa-github"></i>
-                        <i class="fa-brands fa-linkedin"></i>
+                        <div class="text-border"></div>
+                        <div class="text-description">
+                            I’m a second-year
+                            <span class="description-emphasis">Computer Science major</span> at the
+                            <span class="description-university">University of California San Diego</span> with a
+                            passion for <span class="description-emphasis">full-stack development</span>. Currently, I’m
+                            focusing on building a strong foundation in web development, learning both front-end and
+                            back-end technologies. I’m excited to deepen my knowledge in coding, problem-solving, and
+                            software development to create impactful and efficient applications.
+                        </div>
                     </div>
                 </div>
-                <div class="about-image"></div>
+                <div class="about-image">
+                    <div class="image-filler"></div>
+                </div>
+                <i class="fa-solid fa-angles-down" id="about-scroll-icon"></i>
             </div>
         </section>
 
         <!-- ========== Skills ========== -->
-        <section class="skills">
+        <section id="skills" class="skills">
             <div class="skills-title">Skills</div>
             <div class="skills-container">
                 <div class="skills-grid">
-                    <div class="grid-item">
+                    <div class="skill-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
                     </div>
-                    <div class="grid-item">
+
+                    <div class="skill-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
                     </div>
-                    <div class="grid-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+
+                    <div class="skill-item">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                        />
                     </div>
 
-                    <div class="grid-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                    <div class="skill-item">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                        />
                     </div>
-                    <div class="grid-item">
+
+                    <div class="skill-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
                     </div>
-                    <div class="grid-item">
+
+                    <div class="skill-item">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- ========== Projects ========== -->
+        <section id="projects" class="projects">
+            <div class="projects-title">Projects</div>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="item-image"></div>
+                    <div class="item-name">Project X</div>
+                    <div class="item-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium culpa nam omnis earum autem
+                        ipsum, ut vitae repellendus aliquam.
+                    </div>
+                    <div class="item-icons">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-image"></div>
+                    <div class="item-name">Project X</div>
+                    <div class="item-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium culpa nam omnis earum autem
+                        ipsum, ut vitae repellendus aliquam.
+                    </div>
+                    <div class="item-icons">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-image"></div>
+                    <div class="item-name">Project X</div>
+                    <div class="item-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium culpa nam omnis earum autem
+                        ipsum, ut vitae repellendus aliquam.
+                    </div>
+                    <div class="item-icons">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-image"></div>
+                    <div class="item-name">Project X</div>
+                    <div class="item-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium culpa nam omnis earum autem
+                        ipsum, ut vitae repellendus aliquam.
+                    </div>
+                    <div class="item-icons">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-image"></div>
+                    <div class="item-name">Project X</div>
+                    <div class="item-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium culpa nam omnis earum autem
+                        ipsum, ut vitae repellendus aliquam.
+                    </div>
+                    <div class="item-icons">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-image"></div>
+                    <div class="item-name">Project X</div>
+                    <div class="item-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium culpa nam omnis earum autem
+                        ipsum, ut vitae repellendus aliquam.
+                    </div>
+                    <div class="item-icons">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-copyright">© 2024 Lino Navarro | All Rights Reserved</div>
+        </footer>
+
         <script src="script.js"></script>
     </body>
 </html>
