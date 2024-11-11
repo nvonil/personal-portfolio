@@ -12,12 +12,27 @@
 
 :root {
     --black: #212529;
+    --gray: #495057;
     --white: #f8f9fa;
-    --green: #73877b;
 }
 
 body {
     background-color: var(--white);
+}
+
+section {
+    padding: 10rem 15%;
+
+    width: 100%;
+    height: 100vh;
+}
+
+section:nth-of-type(2) {
+    background-color: var(--black);
+}
+
+section:nth-of-type(3) {
+    height: auto;
 }
 
 /* ========== Nav ========== */
@@ -29,28 +44,13 @@ nav {
     z-index: 1000;
 
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 4rem;
 
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 3rem;
 
-    padding: 0.5rem 1.5rem;
-}
-
-.navbar-title {
-    color: var(--white);
-    font-size: 1.25rem;
-    font-weight: 500;
-    text-wrap: nowrap;
-
-    transition: transform 0.3s;
-}
-
-.navbar-title:hover,
-.navbar-contact-button:hover {
-    transform: scale(1.05);
+    padding: 0.5rem 2rem;
 }
 
 .navbar-links {
@@ -64,7 +64,6 @@ nav {
 }
 
 .navbar-link-item {
-    position: relative;
     transition: transform 0.3s;
 }
 
@@ -83,8 +82,8 @@ nav {
     width: 100%;
     height: 3px;
 
-    background-color: var(--green);
-    border-radius: 1rem;
+    background-color: var(--white);
+    border-radius: 3rem;
 
     transition: transform 0.3s;
 }
@@ -93,17 +92,10 @@ nav {
     transform: scaleX(1);
 }
 
-#navbar-menu-icon {
-    color: var(--white);
-    font-size: 2rem;
-
-    display: none;
-}
-
 .navbar-contact-button {
     padding: 0.5rem 1.5rem;
 
-    background-color: var(--green);
+    background-color: var(--gray);
     border: none;
     border-radius: 3rem;
     color: var(--white);
@@ -115,17 +107,42 @@ nav {
     transition: transform 0.3s;
 }
 
-/* ========== About ========== */
-section {
-    padding: 10rem 15%;
-
-    width: 100%;
-    height: 100vh;
+.navbar-contact-button:hover {
+    transform: scale(1.05);
 }
 
+#navbar-menu-icon {
+    color: var(--white);
+    font-size: 2rem;
+
+    display: none;
+}
+
+/* ========== Socials ========== */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+}
+
+.social-icons i {
+    color: var(--black);
+    cursor: pointer;
+    font-size: 2.5rem;
+
+    transition: transform 0.3s;
+}
+
+.social-icons i:hover {
+    transform: scale(1.05);
+}
+
+/* ========== About ========== */
 .about {
     display: flex;
-    justify-content: center;
 }
 
 .about-container {
@@ -134,55 +151,70 @@ section {
     gap: 10rem;
 }
 
-.about-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.text-greeting {
-    font-size: 2rem;
-    font-weight: 300;
-}
-
 .text-name {
+    color: var(--black);
     font-size: 4rem;
     font-weight: 500;
+    line-height: 1;
+}
+
+.text-border {
+    width: 25%;
+    height: 3px;
+
+    margin: 2rem 0;
+
+    background-color: var(--gray);
+    border-radius: 3rem;
 }
 
 .text-description {
-    color: var(--green);
-    font-size: 2rem;
+    color: var(--black);
+    font-size: 1rem;
     font-weight: 300;
 }
 
-.info-socials {
-    display: flex;
-    gap: 2rem;
+.description-emphasis {
+    font-style: italic;
+    font-weight: 500;
 }
 
-.info-socials i {
-    font-size: 2.5rem;
-    cursor: pointer;
-
-    transition: 0.3s;
+.description-university {
+    font-weight: 500;
 }
 
-.info-socials i:hover {
-    transform: scale(1.05);
-}
-
-.about-image {
+.image-filler {
     width: 500px;
     height: 500px;
 
-    background-color: var(--green);
+    background-color: var(--gray);
     border-radius: 50%;
 }
 
-/* ========== Skills ========== */
+#about-scroll-icon {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
 
+    color: var(--black);
+    font-size: 2rem;
+
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1rem);
+    }
+}
+
+/* ========== Skills ========== */
 .skills-title {
+    color: var(--white);
     font-size: 4rem;
     font-weight: 500;
     text-align: center;
@@ -193,8 +225,6 @@ section {
 .skills-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 5rem;
 }
 
 .skills-grid {
@@ -203,8 +233,8 @@ section {
     gap: 5rem;
 }
 
-.grid-item {
-    border: 1px solid var(--black);
+.skill-item {
+    border: 1px solid var(--white);
     border-radius: 3rem;
 
     padding: 3rem;
@@ -214,12 +244,100 @@ section {
     transition: all 0.3s;
 }
 
-.grid-item:hover {
-    background-color: var(--green);
+.skill-item:hover {
+    background-color: var(--gray);
     transform: scale(1.05);
 }
 
-.grid-item img {
-    width: 8rem;
-    height: 8rem;
+.skill-item img {
+    width: 6rem;
+    height: 6rem;
+}
+
+/* ========== Projects ========== */
+.projects-title {
+    color: var(--black);
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+
+    margin-bottom: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.project-item {
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    border: 1px solid var(--black);
+    border-radius: 3rem;
+    line-height: 1;
+
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-10px) scale(1.01);
+}
+
+.item-image {
+    width: 100%;
+    height: 20rem;
+
+    background-color: var(--gray);
+    border-radius: 1rem;
+}
+
+.item-name {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.item-description {
+    color: var(--black);
+    font-weight: 300;
+}
+
+.item-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.item-icons i {
+    color: var(--black);
+    font-size: 2rem;
+
+    transition: transform 0.3s;
+}
+
+.item-icons i:hover {
+    transform: scale(1.05);
+}
+
+/* ========== Footer ========== */
+footer {
+    height: 5rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: var(--black);
+}
+
+.footer-copyright {
+    color: var(--white);
+    font-weight: 300;
 }
