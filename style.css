@@ -51,6 +51,17 @@ nav {
     border-radius: 3rem;
 
     padding: 0.5rem 2rem;
+
+    animation: navbar-load 0.5s ease-in;
+}
+
+@keyframes navbar-load {
+    0% {
+        transform: translateX(-50%) translateY(-100%);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 .navbar-links {
@@ -126,6 +137,17 @@ nav {
     position: fixed;
     bottom: 2%;
     right: 2%;
+
+    animation: social-icons-load 0.5s ease-in;
+}
+
+@keyframes social-icons-load {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .social-icons i {
@@ -149,6 +171,27 @@ nav {
     display: flex;
     align-items: center;
     gap: 10rem;
+}
+
+.about-info {
+    animation: about-info-load 0.5s ease-in;
+}
+
+@keyframes about-info-load {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.text-greeting {
+    color: var(--black);
+    font-size: 3rem;
+    font-weight: 300;
+
+    margin-bottom: 0.5rem;
 }
 
 .text-name {
@@ -181,6 +224,19 @@ nav {
 
 .description-university {
     font-weight: 500;
+}
+
+.about-image {
+    animation: about-image-load 0.5s ease-in;
+}
+
+@keyframes about-image-load {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .image-filler {
