@@ -255,10 +255,10 @@ nav {
     color: var(--black);
     font-size: 2rem;
 
-    animation: bounce 1s infinite;
+    animation: scroll-bounce 1s infinite;
 }
 
-@keyframes bounce {
+@keyframes scroll-bounce {
     0%,
     100% {
         transform: translateY(0);
@@ -287,6 +287,21 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
+
+    animation: skills-appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes skills-appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .skill-item {
@@ -324,6 +339,21 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+
+    animation: projects-appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes projects-appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 .project-item {
