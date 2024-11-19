@@ -194,8 +194,31 @@ nav {
     vertical-align: top;
 }
 
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .form-button {
     margin: 1rem 0;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-icons i {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 2rem;
+
+    transition: transform 0.3s;
+}
+
+.contact-icons i:hover {
+    transform: scale(1.05);
 }
 
 /* ---------- Socials ---------- */
