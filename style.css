@@ -146,7 +146,7 @@ nav {
     border: 1px solid var(--gray);
     border-radius: 3rem;
 
-    padding: 4rem 4rem;
+    padding: 4rem;
 
     transition: all 0.3s;
 }
@@ -533,4 +533,67 @@ footer {
 
 .footer-copyright a:hover {
     transform: scale(1.05);
+}
+
+/* ========== Responsiveness ========== */
+@media (max-width: 650px) {
+    * {
+        animation: none !important;
+    }
+
+    section {
+        width: 100vw;
+        height: auto;
+    }
+
+    .contact {
+        padding: 3rem;
+    }
+
+    .social-icons,
+    #about-scroll-icon {
+        display: none;
+    }
+
+    .about {
+        display: block;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .text-greeting {
+        font-size: 2rem;
+    }
+
+    .text-name,
+    .skills-title,
+    .projects-title {
+        font-size: 3rem;
+    }
+
+    .text-divider {
+        margin: 1rem 0;
+    }
+
+    .image-filler {
+        width: 400px;
+        height: 400px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .projects {
+        padding: 10rem 20%;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 6rem;
+    }
 }
