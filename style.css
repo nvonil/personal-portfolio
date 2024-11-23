@@ -518,4 +518,19 @@ footer {
 .footer-copyright {
     color: var(--white);
     font-weight: 300;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-copyright a {
+    color: var(--white);
+    font-size: 1.5rem;
+
+    transition: transform 0.3s;
+}
+
+.footer-copyright a:hover {
+    transform: scale(1.05);
 }
