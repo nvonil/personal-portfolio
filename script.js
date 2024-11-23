@@ -44,3 +44,21 @@ function changeIconColorOnScroll() {
 
 window.addEventListener("scroll", changeIconColorOnScroll);
 changeIconColorOnScroll();
+
+// ========== Tab Behavior Functionality ==========
+let openTabs = {};
+
+document.querySelectorAll(".portfolio-link").forEach((link) => {
+    link.addEventListener("click", function (event) {
+        const url = link.href;
+
+        if (openTabs[url] && !openTabs[url].closed) {
+            openTabs[url].focus();
+        } else {
+            const newTab = window.open(url, "_blank");
+            openTabs[url] = newTab;
+        }
+
+        event.preventDefault();
+    });
+});
