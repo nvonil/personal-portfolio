@@ -62,3 +62,16 @@ document.querySelectorAll(".portfolio-link").forEach((link) => {
         event.preventDefault();
     });
 });
+
+// ========== Navbar Menu Icon Functionality ==========
+
+const navbarContainer = document.querySelector(".navbar-container");
+const navbarMenuIcon = document.getElementById("navbar-menu-icon");
+
+navbarMenuIcon.addEventListener("click", () => {
+    if (navbarContainer.style.display === "flex") {
+        navbarContainer.style.display = "none";
+    } else {
+        navbarContainer.style.display = "flex";
+    }
+});
