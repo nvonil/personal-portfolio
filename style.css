@@ -643,6 +643,7 @@ footer {
 
         width: 100%;
 
+        display: none;
         flex-direction: column;
         gap: 2rem;
 
@@ -651,6 +652,10 @@ footer {
 
         background-color: rgba(0, 0, 0, 0.8);
         border-radius: 3rem;
+    }
+
+    .navbar-container.active {
+        display: flex;
     }
 
     .navbar-links {
