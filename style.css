@@ -127,6 +127,25 @@ nav {
     transform: scale(1.05);
 }
 
+.navbar-icons {
+    display: none;
+    gap: 1rem;
+}
+
+.navbar-icons i,
+.contact-icons i {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 2rem;
+
+    transition: transform 0.3s;
+}
+
+.navbar-icons i:hover,
+.contact-icons i {
+    transform: scale(1.05);
+}
+
 #navbar-menu-icon {
     color: var(--white);
     font-size: 2rem;
@@ -210,18 +229,6 @@ nav {
 .contact-icons {
     display: flex;
     gap: 1rem;
-}
-
-.contact-icons i {
-    color: var(--white);
-    cursor: pointer;
-    font-size: 2rem;
-
-    transition: transform 0.3s;
-}
-
-.contact-icons i:hover {
-    transform: scale(1.05);
 }
 
 /* ---------- Socials ---------- */
@@ -598,8 +605,8 @@ footer {
         padding: 3rem;
     }
 
-    .social-icons {
-        display: none;
+    .contact-icons i {
+        gap: 0.5rem;
     }
 
     .text-greeting {
@@ -663,11 +670,32 @@ footer {
         text-align: center;
     }
 
+    .navbar-icons {
+        display: flex;
+    }
+
     #navbar-menu-icon {
         display: block;
 
         color: var(--white);
         font-size: 2rem;
+    }
+
+    .contact.active {
+        top: 80%;
+        transform: translate(-50%, -80%);
+    }
+
+    .form-actions {
+        gap: 1rem;
+    }
+
+    .contact-icons {
+        gap: 0.5rem;
+    }
+
+    .social-icons {
+        display: none;
     }
 
     .text-greeting {
@@ -683,20 +711,16 @@ footer {
         height: 300px;
     }
 
-    .contact.active {
-        top: 90%;
-        transform: translate(-50%, -90%);
-    }
-
-    .form-actions {
-        gap: 1rem;
-    }
-
-    .contact-icons {
-        gap: 0.5rem;
-    }
-
     .skills-grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .skill-item,
+    .project-item {
+        padding: 2rem;
+    }
+
+    .item-icons {
+        gap: 1rem;
     }
 }
