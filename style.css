@@ -142,7 +142,7 @@ nav {
 }
 
 .navbar-icons i:hover,
-.contact-icons i {
+.contact-icons i:hover {
     transform: scale(1.05);
 }
 
@@ -605,7 +605,7 @@ footer {
         padding: 3rem;
     }
 
-    .contact-icons i {
+    .contact-icons {
         gap: 0.5rem;
     }
 
@@ -688,10 +688,6 @@ footer {
 
     .form-actions {
         gap: 1rem;
-    }
-
-    .contact-icons {
-        gap: 0.5rem;
     }
 
     .social-icons {
