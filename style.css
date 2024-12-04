@@ -349,11 +349,13 @@ nav {
     border-radius: 50%;
 }
 
-#about-scroll-icon {
+.about-scroll {
     position: absolute;
     bottom: 2%;
     left: 50%;
+}
 
+#about-scroll-icon {
     color: var(--black);
     font-size: 2rem;
 
