@@ -359,7 +359,7 @@ nav {
     color: var(--black);
     font-size: 2rem;
 
-    animation: about-scroll-icon-bounce 1s infinite;
+    animation: about-scroll-icon-bounce 2s infinite ease;
 }
 
 @keyframes about-scroll-icon-bounce {
